@@ -1,0 +1,47 @@
+.nav-primary {
+  @apply text-center py-12 font-acumin font-bold tracking-widest;
+  li {
+    @apply py-4 mx-16 border-b
+  }
+  & li:last-child {
+    @apply border-b-0 text-tt-darkblue mt-8;
+    a {
+      @apply text-tt-darkblue bg-tt-sand px-8 py-2 uppercase font-sans font-normal;
+    }
+  }
+  a {
+    @apply text-xl text-white;
+  }
+}
+
+@screen lg {
+  .nav-primary {
+    @apply flex items-center py-0 font-oswald font-bold;
+    li {
+      @apply mx-0;
+      &:nth-last-child(n+3) {
+        a {
+          @apply relative;
+          &:after {
+            content: '';
+            height: 60%;
+            width: 2px;
+            position: absolute;
+            right: 0;
+            top: 25%;
+            @apply bg-tt-darkblue;
+          }
+        }
+      }
+    }
+    a {
+      @apply text-tt-darkblue px-6 text-base;
+    }
+    & li:last-child {
+      @apply border-b-0 mt-0;
+      a {
+        @apply text-tt-sand bg-tt-darkblue px-6 py-2 text-xs uppercase font-sans font-normal;
+      }
+    }
+  }
+}

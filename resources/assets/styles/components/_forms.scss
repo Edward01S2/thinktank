@@ -1,0 +1,83 @@
+.gfield {
+  @apply text-left pb-4;
+}
+
+.gfield_label {
+  @apply uppercase text-left;
+}
+
+.gform_validation_container {
+  @apply hidden;
+}
+
+.ginput_container input {
+  @apply pl-2;
+}
+
+body .gform_wrapper .gform_footer input[type=submit] {
+  @apply w-auto bg-tt-darkblue text-tt-sand px-8 py-2 uppercase mb-0;
+} 
+
+.gform_footer {
+  @apply text-center pt-4;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield input {
+  @apply bg-tt-sand border border-tt-darkblue w-full py-1;
+}
+
+.ginput_container{
+  @apply pt-1;
+}
+
+#gform_wrapper_2 {
+  @apply py-8;
+  .gfield_label {
+    @apply text-tt-sand font-acumin tracking-widest text-lg;
+  }
+  .gform_footer input[type=submit] {
+    @apply w-auto bg-tt-sand text-tt-darkblue px-8 py-2 uppercase mb-0;
+  } 
+  .gfield textarea {
+    @apply w-full h-24 pl-2 bg-tt-sand;
+  }
+
+  .gfield .gfield_select {
+    @apply appearance-none w-full py-1 bg-tt-sand pl-2 relative border-0;
+
+    .gf_placeholder{
+      @apply text-gray-600;
+    }
+  }
+
+}
+
+@screen md {
+  #gform_fields_2 {
+    @apply flex flex-wrap;
+  }
+  #field_2_5, #field_2_6, #field_2_2, #field_2_3 {
+    @apply w-1/2 px-4;
+  }
+  #field_2_4 {
+    @apply flex-grow px-4;
+  }
+}
+
+@screen lg {
+  #gform_fields_1 {
+    @apply flex justify-center; 
+  }
+  .gfield {
+    @apply w-2/5 px-2;
+  }
+  body .gform_wrapper .gform_footer input[type=submit] {
+    @apply px-12;
+  }
+}
+
+@screen xl {
+  .gfield {
+    @apply w-1/3 px-4;
+  }
+}

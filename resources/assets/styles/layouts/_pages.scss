@@ -1,0 +1,42 @@
+.w-curve {
+  width: 110%;
+}
+
+.w-margin {
+  margin-left: -5%;
+}
+
+.spec-bg {
+  background-position: bottom; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+.title-line {
+  @apply relative;
+  &:after {
+    content: '';
+    height: 3px;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: -0.3rem;
+    background-color: #87AEBF;
+  }
+  &.orange {
+    &:after {
+      @apply bg-tt-gold;
+    }
+  }
+}
+
+.accordion-btn {
+  &.opened {
+    .open {
+      @apply hidden;
+    }
+    .close {
+      @apply block;
+    }
+  }
+}

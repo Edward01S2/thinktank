@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-tight text-tt-darkblue;
+}
+
+p {
+  @apply mb-3 leading-normal font-muli;
+}
+
+a {
+  @apply cursor-pointer no-underline border-b border-transparent;
+
+  transition: 0.2s ease;
+}
+
+button {
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+body {
+  @apply bg-tt-sand;
+}
+
+.rounded-top {
+  border-radius: 50%;
+}
+
+.social-link {
+  @apply px-4;
+}
+
+.social-svg {
+  @apply h-6 w-6 fill-current text-tt-sand;
+}
