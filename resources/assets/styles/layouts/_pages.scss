@@ -40,3 +40,33 @@
     }
   }
 }
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.contact-content {
+  p {
+    @apply mb-0 leading-relaxed px-8 text-lg;
+  }
+
+  a {
+    @apply underline;
+  }
+}
+
+.google-map {
+  @apply w-full overflow-hidden h-0 relative mt-12;
+  padding-bottom: 56.25%;
+  iframe {
+    @apply left-0 top-0 w-full h-full absolute;
+  }
+}
+
+@screen lg {
+  .contact-content {
+    p {
+      @apply px-0;
+    }
+  }
+}

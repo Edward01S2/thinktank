@@ -6,8 +6,14 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
-    protected $acf = true;
-    
+    // protected $acf = true;
+
+    public function optionsPage() {
+        return (object) array(
+            'acf_options' => get_fields('options'),
+        );
+    }
+
     public function siteName()
     {
         return get_bloginfo('name');
@@ -32,4 +38,14 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function featImage() {
+        if(has_post_thumbnail()) {
+            return get_the_post_thumbnail_url();
+        }
+        else {
+            return false;
+        }
+    }
+
 }

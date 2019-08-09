@@ -23,6 +23,7 @@ module.exports = {
       'tt-ltblue': '#92B7C6',
       'tt-gray': '#58595B',
       'tt-turq': '#13a89d',
+      'tt-brown': '#C4A485',
 
       gray: {
         100: '#f7fafc',
@@ -209,6 +210,7 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
+      tt: '0 2px 10px rgba(0,0,0,0.25)',
     },
     container: {},
     cursor: {
@@ -381,6 +383,7 @@ module.exports = {
     opacity: {
       '0': '0',
       '05': '0.05',
+      '15': '0.15',
       '25': '0.25',
       '50': '0.5',
       '75': '0.75',

@@ -1,5 +1,5 @@
 .nav-primary {
-  @apply text-center py-12 font-acumin font-bold tracking-widest;
+  @apply text-center pt-12 pb-8 font-acumin font-bold tracking-widest;
   li {
     @apply py-4 mx-16 border-b
   }
@@ -12,6 +12,10 @@
   a {
     @apply text-xl text-white;
   }
+}
+
+.social-dd {
+  @apply h-8 w-8 fill-current text-tt-sand;
 }
 
 @screen lg {

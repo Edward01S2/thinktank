@@ -39,18 +39,27 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
     @apply w-auto bg-tt-sand text-tt-darkblue px-8 py-2 uppercase mb-0;
   } 
   .gfield textarea {
-    @apply w-full h-24 pl-2 bg-tt-sand;
+    @apply w-full h-24 pl-2 bg-tt-sand border border-tt-darkblue;
   }
 
   .gfield .gfield_select {
-    @apply appearance-none w-full py-1 bg-tt-sand pl-2 relative border-0;
+    @apply appearance-none w-full py-1 bg-tt-sand pl-2 relative border border-tt-darkblue;
 
     .gf_placeholder{
       @apply text-gray-600;
     }
   }
-
 }
+
+.contact-form #gform_wrapper_2 {
+
+  .gform_footer input[type=submit] {
+    @apply w-auto bg-tt-darkblue text-tt-sand px-12 py-2 uppercase mb-0;
+  }
+  .gfield_label {
+    @apply text-tt-darkblue font-acumin tracking-widest text-lg;
+  }
+} 
 
 @screen md {
   #gform_fields_2 {

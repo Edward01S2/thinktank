@@ -6,7 +6,7 @@
     @include('partials.header')
     <div class="" role="document">
       <div class="content">
-        <main class="main">
+        <main class="main lg:pt-20">
           @yield('content')
         </main>
         @if (App\display_sidebar())
