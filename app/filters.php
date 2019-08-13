@@ -104,7 +104,7 @@ function populate_posts( $form ) {
 
         // you can add additional parameters here to alter the posts that are retrieved
         // more info: http://codex.wordpress.org/Template_Tags/get_posts
-        $posts = get_posts( 'numberposts=-1&post_type=staff' );
+        $posts = get_posts( 'numberposts=-1&post_type=staff&orderby=title&order=ASC' );
 
         $choices = array();
 

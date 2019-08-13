@@ -28,19 +28,19 @@ class FrontPage extends Controller
     $services = get_posts([
         'post_type' => 'staff',
         'posts_per_page'=>'1',
-        // 'meta_query' => array(
-        //   array(
-        //     'key' => 'featured',
-        //     'value' => 'featured',
-        //   )
-        // )
+        'meta_query' => array(
+          array(
+            'key' => 'featured',
+            'value' => '1',
+          )
+        )
     ]);
 
     return array_map(function ($post) {
       return [
         'name' => get_the_title($post->ID),
         'image' => get_the_post_thumbnail_url($post->ID),
-        'tags' => get_tags($post->ID),
+        'tags' => get_the_tags($post->ID),
         // 'content' => mb_strimwidth(get_the_content($post->ID), 0, 400, '...'),
         'content'=>mb_strimwidth(get_post_field('post_content', $post->ID), 0, 250, '...'),
         'link' => get_permalink($post->ID),

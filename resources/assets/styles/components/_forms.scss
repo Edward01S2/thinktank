@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .gfield {
   @apply text-left pb-4;
 }
@@ -15,7 +16,10 @@
 }
 
 body .gform_wrapper .gform_footer input[type=submit] {
-  @apply w-auto bg-tt-darkblue text-tt-sand px-8 py-2 uppercase mb-0;
+  @apply w-auto bg-tt-darkblue text-tt-sand px-8 py-2 uppercase mb-0 cursor-pointer;
+  &:hover {
+    @apply bg-tt-blue;
+  }
 } 
 
 .gform_footer {
@@ -36,7 +40,10 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
     @apply text-tt-sand font-acumin tracking-widest text-lg;
   }
   .gform_footer input[type=submit] {
-    @apply w-auto bg-tt-sand text-tt-darkblue px-8 py-2 uppercase mb-0;
+    @apply w-auto bg-tt-sand text-tt-darkblue px-8 py-2 uppercase mb-0 cursor-pointer;
+    &:hover {
+      @apply bg-tt-beige;
+    }
   } 
   .gfield textarea {
     @apply w-full h-24 pl-2 bg-tt-sand border border-tt-darkblue;
@@ -55,6 +62,9 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
 
   .gform_footer input[type=submit] {
     @apply w-auto bg-tt-darkblue text-tt-sand px-12 py-2 uppercase mb-0;
+    &:hover {
+      @apply bg-tt-blue;
+    }
   }
   .gfield_label {
     @apply text-tt-darkblue font-acumin tracking-widest text-lg;
@@ -90,3 +100,5 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
     @apply w-1/3 px-4;
   }
 }
+
+/* purgecss end ignore */

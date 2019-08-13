@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="text-center flex justify-center pb-16">
-        <a href="#specialties">
+        <a href="#specialties" class="hover:opacity-50">
           <svg class="h-10 w-10" width="1px" height="1px" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <g stroke-width="3" stroke="#C3884D" stroke-linecap="round">
@@ -42,7 +42,7 @@
                     <img class="w-2/12 md:w-16" src="{!! $service['image'] !!}"/> 
                     <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-lg">{!! $service['title'] !!}</h3>
                   </div>
-                  <button class="accordion-btn outline-none">
+                  <button class="accordion-btn outline-none hover:opacity-50">
                       <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                       <svg class="close h-8 w-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                   </button>
@@ -92,12 +92,12 @@
                 {!! $item['content'] !!}
               </div>
               <div class>
-                <a class="bg-tt-sand text-tt-stone px-10 text-lg py-2 uppercase mb-16 xl:inline-block xl:mb-8" href="{!! $item['link'] !!}">Read More</a>
+                <a class="bg-tt-sand text-tt-stone px-10 text-lg py-2 uppercase mb-16 hover:bg-tt-beige xl:inline-block xl:mb-8" href="{!! $item['link'] !!}">Read More</a>
               </div>
             </div>
           @endforeach
           <div class="bg-tt-sand w-full text-center md:bg-tt-stone md:mb-2 xl:static xl:text-left">
-            <a class="bg-tt-darkblue block mx-8 my-4 uppercase py-2 text-lg lg:inline-block lg:px-12 xl:mx-0 xl:mb-12" href="/staff">Meet the Full Team</a>
+            <a class="bg-tt-darkblue block mx-8 my-4 uppercase py-2 text-lg hover:bg-tt-blue lg:inline-block lg:px-12 xl:mx-0 xl:mb-12" href="/staff">Meet the Full Team</a>
           </div>
         </div>
       </div>
@@ -118,8 +118,6 @@
   </section>
 
   @include('partials.get-in-touch')
-
-
 
   {{-- @debug
   @dump($options_page) --}}

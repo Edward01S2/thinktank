@@ -11,6 +11,9 @@
   }
   a {
     @apply text-xl text-white;
+    &:hover {
+      @apply opacity-50;
+    }
   }
 }
 

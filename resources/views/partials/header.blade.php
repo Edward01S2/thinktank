@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <nav class="flex items-center justify-between flex-wrap pt-4 pb-4 lg:flex-no-wrap xl:px-4 2xl:px-0">
       <div id="nav-brand" class="flex items-center flex-shrink-0 pl-4 xl:pl-0 ">
-        <a class="brand" href="{{ home_url('/') }}">
+        <a class="brand hover:opacity-50" href="{{ home_url('/') }}">
             <img class="h-10 md:h-12" src="{{ $options_page->acf_options['logo']['url'] }}" alt="">  
           </a>
       </div>

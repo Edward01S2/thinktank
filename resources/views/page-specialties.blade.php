@@ -7,7 +7,7 @@
   <section id="hero">
     <div class="">
       <div class="relative z-10">
-        <img class="h-40 object-cover w-full grayscale md:h-64 lg:h-72 xl:h-80" src="{!! App::featImage() !!}" />
+        <img class="h-40 object-cover w-full grayscale md:h-64 lg:h-72 xl:h-76" src="{!! App::featImage() !!}" />
         <div class="absolute h-full w-full bg-tt-sand top-0 opacity-25"></div>
       </div>
     </div>
@@ -28,8 +28,8 @@
                     <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">{!! $service['title'] !!}</h3>
                   </div>
                   <button class="accordion-btn outline-none">
-                      <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                      <svg class="close h-8 w-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                      <svg class="open h-8 w-8 hover:opacity-50" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                      <svg class="close h-8 w-8 hidden hover:opacity-50" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                   </button>
                 </div>
                 <div class="accordion-content flex hidden">

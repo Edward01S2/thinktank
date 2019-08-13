@@ -38,13 +38,13 @@
   },
   "devDependencies": {
     "autoprefixer": "~8.2.0",
-    "browser-sync": "~2.24.7",
+    "browser-sync": "^2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
     "buble-loader": "^0.4.1",
     "cache-loader": "~1.2.5",
     "clean-webpack-plugin": "^0.1.18",
-    "copy-globs-webpack-plugin": "^0.2.0",
+    "copy-globs-webpack-plugin": "^0.3.0",
     "css-loader": "^0.28.9",
     "cssnano": "~4.0.5",
     "eslint": "~4.19.1",
@@ -53,12 +53,14 @@
     "extract-text-webpack-plugin": "~3.0.2",
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "glob-all": "^3.1.0",
     "imagemin-mozjpeg": "~7.0.0",
-    "imagemin-webpack-plugin": "~2.2.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "import-glob": "~1.5",
     "node-sass": "~4.9.4",
     "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
+    "purgecss-webpack-plugin": "^1.5.0",
     "resolve-url-loader": "~2.3.1",
     "rimraf": "~2.6",
     "sass-loader": "~6.0",
@@ -79,6 +81,8 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1",
-    "responsive-nav": "^1.0.39"
+    "purgecss-whitelister": "^2.4.0",
+    "responsive-nav": "^1.0.39",
+    "slick-carousel": "^1.8.1"
   }
 }

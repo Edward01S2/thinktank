@@ -34,6 +34,8 @@
  */
 @tailwind components;
 
+@import "~slick-carousel/slick/slick.scss";
+
 /** Import theme styles */
 @import "common/global";
 @import "components/buttons";

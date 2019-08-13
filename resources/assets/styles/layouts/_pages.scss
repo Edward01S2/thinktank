@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .w-curve {
   width: 110%;
 }
@@ -63,6 +64,45 @@
   }
 }
 
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	
+	margin: 0;
+	padding: 1rem 0rem;
+	
+	list-style-type: none;
+	
+		li {
+			margin: 0 0.75rem !important;
+		}
+	
+		button {
+			display: block;
+			width: 10px !important;
+			height: 10px !important;
+			padding: 0 !important;
+			
+      border: 1px solid !important;
+      @apply border-tt-darkblue;
+			border-radius: 100%;
+			// background-color: blue !important;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			@apply bg-tt-darkblue;
+		}
+	
+}
+
+.staff-content {
+  p {
+    @apply leading-relaxed;
+  }
+}
+
 @screen lg {
   .contact-content {
     p {
@@ -70,3 +110,4 @@
     }
   }
 }
+/* purgecss end ignore */

@@ -37,6 +37,9 @@ body {
 
 .social-link {
   @apply px-4;
+  &:hover {
+    @apply text-tt-beige opacity-50;
+  }
 }
 
 .social-svg {

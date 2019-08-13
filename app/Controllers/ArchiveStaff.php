@@ -11,6 +11,8 @@ class ArchiveStaff extends Controller
     $services = get_posts([
         'post_type' => 'staff',
         'posts_per_page'=>'-1',
+        'order' => 'ASC',
+        'orderby' => 'title',
         // 'meta_query' => array(
         //   array(
         //     'key' => 'featured',
@@ -23,9 +25,9 @@ class ArchiveStaff extends Controller
       return [
         'name' => get_the_title($post->ID),
         'image' => get_the_post_thumbnail_url($post->ID),
-        'tags' => get_tags($post->ID),
+        'tags' => get_the_tags($post->ID),
         // 'content' => mb_strimwidth(get_the_content($post->ID), 0, 400, '...'),
-        'content'=>mb_strimwidth(get_post_field('post_content', $post->ID), 0, 250, '...'),
+        'content'=>mb_strimwidth(get_post_field('post_content', $post->ID), 0, 215, '...'),
         'link' => get_permalink($post->ID),
       ];
     }, $services);

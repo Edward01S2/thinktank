@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const cssnanoConfig = {
-  preset: ['default', { discardComments: { removeAll: true } }]
+  preset: ['default', { discardComments: { removeAll: false } }]
 };
 
 module.exports = ({ file, options }) => {
@@ -9,7 +9,7 @@ module.exports = ({ file, options }) => {
     parser: options.enabled.optimize ? 'postcss-safe-parser' : undefined,
     plugins: {
       autoprefixer: true,
-      cssnano: options.enabled.optimize ? cssnanoConfig : false,
+      // cssnano: options.enabled.optimize ? cssnanoConfig : false,
     },
   };
 };
