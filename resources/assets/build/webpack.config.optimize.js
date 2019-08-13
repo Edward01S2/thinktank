@@ -57,7 +57,7 @@ module.exports = {
         'google-map',
         'iframe',
       ],
-      whitelistPatternsChildren: [/^gfield/, /^gform/, /^ginput/, /^field/],
+      whitelistPatternsChildren: [/^gfield/, /^gform/, /^ginput/, /^field/, /^slick/],
       rejected: true,
     }),
   ],
