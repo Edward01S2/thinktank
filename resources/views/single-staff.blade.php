@@ -65,7 +65,7 @@
                   <a class="uppercase underline font-oswald font-semibold text-tt-blue" href="mailto:{{ $email }}" >{{ $email }}</a>
                 </div>
               </div>
-              <div class="px-8 text-center staff-content py-8 md:text-left md:px-0 md:pr-8">
+              <div class="px-8 text-center staff-content py-8 text-tt-darkblue md:text-left md:px-0 md:pr-8">
                 @php the_content() @endphp
               </div>
               
@@ -77,12 +77,12 @@
                       <div class="flex items-center">
                         <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">Education</h3>
                       </div>
-                      <button class="accordion-btn outline-none">
+                      <button class="accordion-btn outline-none hover:text-tt-gold">
                           <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                           <svg class="close h-8 w-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                       </button>
                     </div>
-                    <div class="accordion-content flex hidden text-left px-2 py-4">
+                    <div class="accordion-content flex hidden text-left px-2 py-4 text-tt-darkblue">
                       {{ $education }}
                     </div>
                   </div>
@@ -93,12 +93,12 @@
                       <div class="flex items-center">
                         <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">Specialties</h3>
                       </div>
-                      <button class="accordion-btn outline-none">
+                      <button class="accordion-btn outline-none hover:text-tt-gold">
                         <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                         <svg class="close h-8 w-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                       </button>
                     </div>
-                    <div class="accordion-content flex hidden text-left px-2 py-4">
+                    <div class="accordion-content flex hidden text-left px-2 py-4 text-tt-darkblue">
                       {{ $specialties }}
                     </div>
                   </div>
