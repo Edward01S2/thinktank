@@ -40,7 +40,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
     @apply text-tt-sand font-acumin tracking-widest text-lg;
   }
   .gform_footer input[type=submit] {
-    @apply w-auto bg-tt-sand text-tt-darkblue font-bold px-8 py-2 uppercase mb-0 cursor-pointer;
+    @apply w-auto bg-tt-sand text-tt-darkblue px-8 py-2 uppercase mb-0 cursor-pointer;
     &:hover {
       @apply bg-tt-gold text-tt-darkblue;
     }
