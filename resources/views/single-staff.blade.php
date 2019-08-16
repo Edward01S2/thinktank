@@ -8,7 +8,7 @@
       <div class="">
         <div class="relative z-10">
           <img class="h-40 object-cover w-full grayscale md:h-64 lg:h-72 xl:h-76" src="{{ $options_page->acf_options['staff_bg']['url']}}" />
-          <div class="absolute h-full w-full bg-tt-sand top-0 opacity-25"></div>
+          <div class="absolute h-full w-full bg-tt-brown top-0 opacity-35"></div>
         </div>
       </div>
     </section>
@@ -47,7 +47,7 @@
             <div class="md:w-2/3 lg:pr-24">
               <div class="hidden md:block md:text-left">
                 <h2 class="uppercase text-2xl pb-2 font-oswald text-tt-darkblue font-semibold tracking-wider">
-                  {!! get_the_title() !!}
+                  {!! get_the_title() !!}@php if(!empty(get_the_tags())) { echo '<span class="text-xs">,</span>'; }@endphp
                   <span class="text-base font-semibold">
                     @php
                     if(!empty(get_the_tags())) {
@@ -72,7 +72,7 @@
 
               <div class="px-4 pb-4 md:flex md:px-0 md:pr-8">
                 <div class="accordion md:pb-8 md:w-1/2 md:mr-8 lg:flex lg:pb-4 lg:mr-12">
-                  <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded-lg shadow-tt shadow-xl shadow-md mb-6 md:py-2 lg:w-full lg:self-start">
+                  <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded shadow-tt shadow-xl shadow-md mb-6 md:py-2 lg:w-full lg:self-start">
                     <div class="accordion-header flex items-center justify-between">
                       <div class="flex items-center">
                         <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">Education</h3>
@@ -88,7 +88,7 @@
                   </div>
                 </div>
                 <div class="accordion md:pb-8 md:w-1/2 lg:flex lg:pb-4">
-                  <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded-lg shadow-tt shadow-xl shadow-md mb-6 md:py-2 lg:w-full lg:self-start">
+                  <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded shadow-tt shadow-xl shadow-md mb-6 md:py-2 lg:w-full lg:self-start">
                     <div class="accordion-header flex items-center justify-between">
                       <div class="flex items-center">
                         <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">Specialties</h3>

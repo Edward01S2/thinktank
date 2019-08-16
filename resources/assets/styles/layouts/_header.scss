@@ -6,13 +6,13 @@
   & li:last-child {
     @apply border-b-0 text-tt-darkblue mt-8;
     a {
-      @apply text-tt-darkblue bg-tt-sand px-8 py-2 uppercase font-sans font-normal;
+      @apply text-tt-darkblue bg-tt-sand px-8 py-2 uppercase font-sans font-semibold;
     }
   }
   a {
     @apply text-xl text-white;
     &:hover {
-      @apply opacity-50;
+      @apply text-tt-gold;
     }
   }
 }
@@ -25,7 +25,7 @@
   .nav-primary {
     @apply flex items-center py-0 font-oswald font-bold;
     li {
-      @apply mx-0;
+      @apply mx-0 py-0;
       &:nth-last-child(n+3) {
         a {
           @apply relative;
@@ -45,9 +45,12 @@
       @apply text-tt-darkblue px-6 text-base;
     }
     & li:last-child {
-      @apply border-b-0 mt-0;
+      @apply border-b-0 -mt-2;
       a {
         @apply text-tt-sand bg-tt-darkblue px-6 py-2 text-xs uppercase font-sans font-normal;
+        &:hover {
+          @apply text-tt-darkblue bg-tt-gold;
+        }
       }
     }
   }

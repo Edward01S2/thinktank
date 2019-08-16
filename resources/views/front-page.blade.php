@@ -10,7 +10,7 @@
         <img class="w-1/2 mx-auto py-12 md:w-2/5 lg:w-1/4 lg:py-16 xl:w-1/5" src="{!! $hero->hero_image->url !!}" />
         <div class="text-center px-8 pb-8 md:pb-8">
           <h2 class="uppercase text-2xl pb-4 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl">{!! $hero->title !!}</h2>
-          <p class="text-lg leading-normal font-muli text-gray-800 md:px-12 lg:px-32 xl:w-4/5 xl:mx-auto">{!! $hero->content !!}</p>
+          <p class="text-lg leading-normal font-muli text-tt-darkblue md:px-12 lg:px-32 xl:w-4/5 xl:mx-auto">{!! $hero->content !!}</p>
         </div>
       </div>
       <div class="text-center flex justify-center pb-16">
@@ -36,19 +36,19 @@
           <h2 class="uppercase text-2xl pb-8 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">Our Specialties</span></h2>
           <div class="accordion md:pb-8">
             @foreach($service_loop as $service)
-              <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded-lg shadow-xl shadow-md mb-6 md:max-w-md md:mx-auto md:py-2 lg:max-w-xl">
+              <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded shadow-xl shadow-md mb-6 md:max-w-md md:mx-auto md:py-2 lg:max-w-xl">
                 <div class="accordion-header flex items-center justify-between">
                   <div class="flex items-center">
-                    <img class="w-2/12 md:w-16" src="{!! $service['image'] !!}"/> 
+                    <img class="w-12 md:w-16" src="{!! $service['image'] !!}"/> 
                     <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-lg">{!! $service['title'] !!}</h3>
                   </div>
-                  <button class="accordion-btn outline-none hover:opacity-50">
-                      <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                  <button class="accordion-btn outline-none hover:text-tt-gold">
+                      <svg class="open h-8 w-8 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                       <svg class="close h-8 w-8 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                   </button>
                 </div>
                 <div class="accordion-content flex hidden">
-                  <ul class="pl-12 text-left font-muli pb-2 md:pl-16 lg:pl-20">
+                  <ul class="pl-12 text-left text-tt-darkblue font-muli pb-2 md:pl-16 lg:pl-20">
                     @foreach($service['specialties'] as $item)
                       <li>{!! $item['specialty'] !!}</li>
                     @endforeach
@@ -74,7 +74,7 @@
             <img class="object-cover object-top rounded-full h-40 w-40 mb-6 md:h-32 md:w-32 xl:hidden" src="{!! $item['image'] !!}" />
             <div class="text-center px-8 pb-8 lg:px-16 xl:text-left xl:px-0">
               <h3 class="text-tt-gold font-black tracking-wide pb-4 lg:text-lg">
-                {!! $item['name'] !!}
+                {!! $item['name'] !!}@php if(!empty($item['tags'])) { echo '<span class="text-xs">,</span>'; }@endphp
                 <span class="text-xs font-semibold">
                   @php
                   if(!empty($item['tags'])) {
@@ -92,12 +92,12 @@
                 {!! $item['content'] !!}
               </div>
               <div class>
-                <a class="bg-tt-sand text-tt-stone px-10 text-lg py-2 uppercase mb-16 hover:bg-tt-beige xl:inline-block xl:mb-8" href="{!! $item['link'] !!}">Read More</a>
+                <a class="bg-tt-sand text-tt-stone px-10 text-lg py-2 uppercase mb-16 hover:bg-tt-gold hover:text-tt-darkblue xl:inline-block xl:mb-8" href="{!! $item['link'] !!}">Read More</a>
               </div>
             </div>
           @endforeach
           <div class="bg-tt-sand w-full text-center md:bg-tt-stone md:mb-2 xl:static xl:text-left">
-            <a class="bg-tt-darkblue block mx-8 my-4 uppercase py-2 text-lg hover:bg-tt-blue lg:inline-block lg:px-12 xl:mx-0 xl:mb-12" href="/staff">Meet the Full Team</a>
+            <a class="bg-tt-darkblue block mx-8 my-4 uppercase py-2 text-lg hover:bg-tt-gold hover:text-tt-darkblue lg:inline-block lg:px-12 xl:mx-0 xl:mb-12" href="/staff">Meet the Full Team</a>
           </div>
         </div>
       </div>

@@ -6,11 +6,11 @@
           <span class="font-bold tracking-wide">
           @php bloginfo('name') @endphp
           </span>
-          <span class="text-tt-turq">|</span>
+          <span class="text-tt-gold">|</span>
           {{$options_page->acf_options['address']}}
         </p>
         <div class="pb-4 xl:pl-8 lg:pb-0">
-          <a class="underline italic hover:text-tt-beige hover:opacity-50" href="tel:{{$options_page->acf_options['phone']}}">{{$options_page->acf_options['phone']}}</a>
+          <a class="underline italic font-bold hover:text-tt-gold" href="tel:{{$options_page->acf_options['phone']}}">{{$options_page->acf_options['phone']}}</a>
         </div>
       </div>
       <div class="pb-8 lg:pb-4 xl:pb-0">

@@ -4,9 +4,9 @@
     <h2 class="uppercase text-2xl pb-4 font-oswald text-tt-sand font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">Get in Touch</span></h2>
     <p class="md:px-8 md:pb-4">There is a solution for your mental health needs, and we are here to help you find it. If this is an emergency, please call 911.</p>
     <div>
-      <a class="underline font-semibold" ref="">972-913-4738</a>
+      <a class="underline font-bold italic hover:text-tt-gold" ref="">972-913-4738</a>
     </div>
-    <div class="text-tt-darkblue">
+    <div>
       @php
         //echo $team->form->id;
       gravity_form_enqueue_scripts($options_page->acf_options['form']['id'], true);

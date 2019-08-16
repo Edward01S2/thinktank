@@ -23,6 +23,7 @@
     right: 0;
     bottom: -0.3rem;
     background-color: #87AEBF;
+    border-radius: 25px;
   }
   &.orange {
     &:after {
@@ -53,6 +54,9 @@
 
   a {
     @apply underline;
+    &:hover {
+      color: #274C68;
+    }
   }
 }
 

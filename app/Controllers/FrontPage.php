@@ -42,7 +42,7 @@ class FrontPage extends Controller
         'image' => get_the_post_thumbnail_url($post->ID),
         'tags' => get_the_tags($post->ID),
         // 'content' => mb_strimwidth(get_the_content($post->ID), 0, 400, '...'),
-        'content'=>mb_strimwidth(get_post_field('post_content', $post->ID), 0, 250, '...'),
+        'content'=>wp_trim_words(get_post_field('post_content', $post->ID), 30, '...'),
         'link' => get_permalink($post->ID),
       ];
     }, $services);

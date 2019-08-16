@@ -6,7 +6,7 @@
     <div class="">
       <div class="relative z-10">
         <img class="h-40 object-cover w-full grayscale md:h-64 lg:h-72 xl:h-76" src="{{ $options_page->acf_options['hero_image']['url']}}" />
-        <div class="absolute h-full w-full bg-tt-sand top-0 opacity-25"></div>
+        <div class="absolute h-full w-full bg-tt-brown top-0 opacity-35"></div>
       </div>
     </div>
   </section>
@@ -26,7 +26,7 @@
               </div>
               <div class="text-center px-8 lg:px-16 xl:px-14">
                 <h3 class="text-tt-gold font-black tracking-wide pb-4 lg:text-lg">
-                  {!! $item['name'] !!}
+                  {!! $item['name'] !!}@php if(!empty($item['tags'])) { echo '<span class="text-xs">,</span>'; }@endphp
                   <span class="text-xs font-semibold">
                     @php
                     if(!empty($item['tags'])) {
@@ -44,7 +44,7 @@
                   {!! $item['content'] !!}
                 </div>
                 <div class>
-                  <a class="bg-tt-darkblue text-tt-sand px-10 text-lg py-2 uppercase mb-16 hover:bg-tt-blue xl:inline-block xl:mb-8" href="{!! $item['link'] !!}">Read More</a>
+                  <a class="bg-tt-darkblue text-tt-sand px-10 text-lg py-2 uppercase mb-16 hover:bg-tt-gold hover:text-tt-darkblue xl:inline-block xl:mb-8" href="{!! $item['link'] !!}">Read More</a>
                 </div>
               </div>
             </div>

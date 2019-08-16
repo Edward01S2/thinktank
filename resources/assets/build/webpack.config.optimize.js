@@ -56,6 +56,7 @@ module.exports = {
         whitelister('resources/assets/styles/components/_forms.scss'),
         'google-map',
         'iframe',
+        'gform_confirmation_wrapper',
       ],
       whitelistPatternsChildren: [/^gfield/, /^gform/, /^ginput/, /^field/, /^slick/],
       rejected: true,

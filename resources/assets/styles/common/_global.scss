@@ -20,6 +20,9 @@ a {
 
   transition: 0.2s ease;
 }
+li {
+  @apply text-tt-darkblue;
+}
 
 button {
   &:focus {
@@ -36,14 +39,17 @@ body {
 }
 
 .social-link {
-  @apply px-4;
+  @apply px-4 fill-current;
   &:hover {
-    @apply text-tt-beige opacity-50;
+    @apply text-tt-gold;
   }
 }
 
 .social-svg {
   @apply h-6 w-6 fill-current text-tt-sand;
+  &:hover {
+    @apply text-tt-gold;
+  }
 }
 
 .blur {
