@@ -39,9 +39,9 @@
           </div>
 
           <div class="md:bg-tt-sand">
-          <div class="container mx-auto md:flex md:pt-12 lg:pb-20">
+          <div class="container mx-auto pt-8 md:flex md:pt-12 lg:pb-20">
             <div class="md:w-1/3">
-              <img class="w-full h-64 object-cover object-center-top md:object-top md:rounded-full md:h-48 md:w-48 md:mx-auto lg:h-64 lg:w-64" src="{!! App::featImage() !!}" />
+              <img class="rounded-full w-48 h-48 object-cover object-top md:object-top mx-auto lg:h-64 lg:w-64" src="{!! App::featImage() !!}" />
             </div>
             
             <div class="md:w-2/3 lg:pr-24">
