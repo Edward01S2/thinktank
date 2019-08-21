@@ -107,6 +107,32 @@
   }
 }
 
+.blog-container {
+  article{
+    &:first-of-type {
+      @apply border-t border-tt-brown;
+    }
+  }
+}
+
+.pagination {
+  .nav-links {
+    @apply inline-flex border-2 border-tt-darkblue font-muli font-bold;
+    .page-numbers {
+      @apply border border-tt-darkblue p-1 px-2;
+      &:hover {
+        @apply bg-tt-darkblue text-tt-sand;
+      }
+    }
+    .current {
+      @apply bg-tt-brown;
+      &:hover {
+        @apply bg-tt-brown text-tt-darkblue;
+      }
+    }
+  }
+}
+
 @screen lg {
   .contact-content {
     p {

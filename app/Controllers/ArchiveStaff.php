@@ -12,7 +12,6 @@ class ArchiveStaff extends Controller
         'post_type' => 'staff',
         'posts_per_page'=>'-1',
         'order' => 'ASC',
-        'orderby' => 'title',
         // 'meta_query' => array(
         //   array(
         //     'key' => 'featured',

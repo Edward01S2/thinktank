@@ -4,7 +4,7 @@
 
   {{-- @include('partials.page-header') --}}
 
-  <section id="hero">
+  <section id="hero" class="pb-24" style="background-image: linear-gradient(to bottom, rgba(235, 233, 228, 0.9), rgba(235, 233, 228, 0.9)), url('{!! $hero->bg_image->url !!}'); background-position: center; background-size: cover;">
     <div class="container mx-auto">
       <div class="flex flex-col justify-center">
         <img class="w-1/2 mx-auto py-12 md:w-2/5 lg:w-1/4 lg:py-16 xl:w-1/5" src="{!! $hero->hero_image->url !!}" />
@@ -28,7 +28,7 @@
     </div>
   </section>
 
-  <section id="specialties" class="overflow-hidden">
+  <section id="specialties" class="overflow-hidden -mt-24">
     <div class="rounded-top w-curve w-margin h-16 bg-tt-beige md:h-24 lg:h-32 xl:h-64"></div>
     <div class="-mt-8 lg:-mt-16 xl:-mt-48">
       <div class="text-center xl:pt-4">

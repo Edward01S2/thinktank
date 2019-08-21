@@ -15,6 +15,11 @@
       @apply text-tt-gold;
     }
   }
+  .current-menu-item {
+    a {
+      @apply text-tt-blue;
+    }
+  }
 }
 
 .social-dd {

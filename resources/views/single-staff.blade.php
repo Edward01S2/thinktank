@@ -33,7 +33,7 @@
                 @endphp
               </span>  
             </h2>
-            <div>
+            <div class="hidden">
               <a class="uppercase underline font-oswald font-semibold text-tt-blue" href="mailto:{{ $email }}" >{{ $email }}</a>
             </div>
           </div>
@@ -61,11 +61,11 @@
                     @endphp
                   </span>  
                 </h2>
-                <div>
+                <div class="hidden">
                   <a class="uppercase underline font-oswald font-semibold text-tt-blue" href="mailto:{{ $email }}" >{{ $email }}</a>
                 </div>
               </div>
-              <div class="px-8 text-center staff-content py-8 text-tt-darkblue md:text-left md:px-0 md:pr-8">
+              <div class="px-8 text-center staff-content py-8 pt-4 text-tt-darkblue md:text-left md:px-0 md:pr-8">
                 @php the_content() @endphp
               </div>
               

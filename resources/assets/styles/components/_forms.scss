@@ -79,7 +79,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
 .contact-form #gform_wrapper_2 {
 
   .gform_footer input[type=submit] {
-    @apply w-auto bg-tt-darkblue text-tt-sand px-12 py-2 uppercase mb-0;
+    @apply w-auto bg-tt-sand text-tt-darkblue px-12 py-2 uppercase mb-0;
     &:hover {
       @apply bg-tt-gold text-tt-darkblue;
     }
@@ -91,7 +91,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield input {
     @apply border-0;
   }
   .gfield_label {
-    @apply text-tt-darkblue font-acumin tracking-widest text-lg font-bold;
+    @apply text-tt-sand font-acumin tracking-widest text-lg font-bold;
   }
   .gform_fields {
     @apply text-tt-darkblue;
