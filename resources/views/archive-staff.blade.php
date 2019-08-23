@@ -63,7 +63,7 @@
         @if($options_page->acf_options['gallery'])
           @foreach($options_page->acf_options['gallery'] as $image)
           <div class="">
-            <img class="w-full h-72 object-cover object-center" src="{{ $image['url'] }}" />
+            <img class="w-full h-72 object-cover object-center" data-lazy="{{ $image['url'] }}" />
           </div>
           @endforeach
         @endif

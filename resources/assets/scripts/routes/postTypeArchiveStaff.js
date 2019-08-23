@@ -22,6 +22,7 @@ export default {
       nextArrow: '.next',
       prevArrow: '.prev',
       mobileFirst: true,
+      lazyLoad: 'ondemand',
       responsive: [
         {
           breakpoint: 768,
