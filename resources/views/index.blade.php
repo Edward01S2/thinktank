@@ -12,7 +12,7 @@
 
   <section id="specialties" class="overflow-hidden relative z-20 -mt-6 md:-mt-16 lg:-mt-32 xl:-mt-48">
     <div class="relative rounded-top w-curve w-margin h-16 bg-tt-sand md:block md:z-20 md:h-24 lg:h-32 xl:h-64"></div>
-    <div class="relative -mt-10 z-30 lg:-mt-16 xl:-mt-40">
+    <div class="relative -mt-10 z-30 lg:-mt-16 xl:-mt-48">
       <div class="text-center xl:pt-4 xl:pb-8">
         <div class="px-4 py-6 pb-8 bg-tt-sand md:pt-0 md:pb-0 xl:pb-0"> 
           <h2 class="uppercase text-2xl pb-2 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">{!! App::title() !!}</span></h2>
@@ -21,7 +21,7 @@
     </div>
   </section>
 
-  <div class="bg-tt-sand">
+  <div class="bg-tt-sand xl:relative xl:z-20 xl:-mt-6">
     <div class="container mx-auto">
       @if (!have_posts())
         <div class="alert alert-warning">

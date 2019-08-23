@@ -2,7 +2,7 @@
   <div class="blog-list">
     <div class="flex flex-col lg:flex-row">
       <div class="w-full lg:w-5/12 xl:w-4/12">
-        <img class="w-full h-auto md:object-cover md:object-center md:h-64 lg:object-cover lg:h-full" src="{!! get_the_post_thumbnail_url() !!}" />
+        <img class="h-64 w-full object-cover object-center md:h-64 lg:object-cover lg:h-full" src="{!! get_the_post_thumbnail_url() !!}" />
       </div>
       <div class="w-full p-8 flex flex-col justify-center border-b border-tt-brown md:p-12 lg:w-7/12 xl:w-8/12">
         <header>
