@@ -14,7 +14,7 @@
 <section id="contact" class="relative z-20 -mt-6 md:-mt-16 lg:-mt-32 xl:-mt-48">
   <div class="relative rounded-top w-curve w-margin h-16 bg-tt-darkblue md:block md:z-20 md:h-24 lg:h-32 xl:h-64"></div>
   <div class="relative bg-tt-darkblue z-10 -mt-10 z-30 lg:-mt-16 xl:-mt-40">
-    <div class="absolute w-full h-full z-0" style="background-image: linear-gradient(to bottom, #112530, rgba(17, 37, 48, 0.8)), url('{{$options_page->acf_options['background_image']['url']}}'); background-size:cover;"></div>
+    <div class="absolute w-full h-full z-0" style="background-image: linear-gradient(to bottom, #112530, rgba(17, 37, 48, 0.92)25%), url('{{$options_page->acf_options['background_image']['url']}}'); background-size:repeat;"></div>
     <div class="relative z-20 flex flex-col text-center text-tt-sand py-8 md:pt-4 lg:flex-row lg:flex-wrap lg:mx-auto lg:px-8 lg:pb-16 xl:max-w-7xl">
       <div class="lg:order-0 lg:text-left lg:w-1/3">
         <h2 class="uppercase text-2xl pb-8 text-tt-sand font-oswald font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line orange">Get in Touch</span></h2>

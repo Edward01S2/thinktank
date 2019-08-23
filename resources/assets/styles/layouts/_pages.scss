@@ -101,6 +101,20 @@
 	
 }
 
+.gallery-slider {
+  .arrow {
+    @apply text-tt-sand fill-current absolute z-20;
+  }
+  .prev {
+    left: 1.5rem;
+    top: calc(50% - 2rem);
+  }
+  .next {
+    right: 1.5rem;
+    top: calc(50% - 2rem);
+  }
+}
+
 .staff-content {
   p {
     @apply leading-relaxed;

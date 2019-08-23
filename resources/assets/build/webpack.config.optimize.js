@@ -58,6 +58,7 @@ module.exports = {
         'iframe',
         'gform_confirmation_wrapper',
         'current-menu-item',
+        'gallery-slider',
       ],
       whitelistPatternsChildren: [/^gfield/, /^gform/, /^ginput/, /^field/, /^slick/, /^nav-primary/],
       rejected: true,
