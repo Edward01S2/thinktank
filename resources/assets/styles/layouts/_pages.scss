@@ -130,6 +130,9 @@
 }
 
 .pagination {
+  h2 {
+    @apply hidden;
+  }
   .nav-links {
     @apply inline-flex border-2 border-tt-darkblue font-muli font-bold;
     .page-numbers {
