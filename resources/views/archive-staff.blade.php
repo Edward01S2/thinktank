@@ -57,23 +57,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="gallery-slider relative">
-      <div class="gallery w-full relative z-0">
-        @if($options_page->acf_options['gallery'])
-          @foreach($options_page->acf_options['gallery'] as $image)
-          <div class="">
-            <img class="w-full h-72 object-cover object-center" data-lazy="{{ $image['url'] }}" />
-          </div>
-          @endforeach
-        @endif
-      </div>
-      <button class="prev arrow"><svg class="h-12 w-12 fill-current hover:text-tt-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76 10l.7-.7z"/></svg></button>
-      <button class="next arrow"><svg class="h-12 w-12 fill-current hover:text-tt-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0 0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24 10l-.7.7z"/></svg></button>
-    </div>
-  </section>
-
-
 
   @include('partials.get-in-touch')
 

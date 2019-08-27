@@ -61,7 +61,7 @@
 }
 
 .google-map {
-  @apply w-full overflow-hidden h-0 relative mt-12;
+  @apply w-full overflow-hidden h-0 relative;
   padding-bottom: 56.25%;
   iframe {
     @apply left-0 top-0 w-full h-full absolute;

@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section id="contact" class="relative z-20 -mt-6 md:-mt-16 lg:-mt-32 xl:-mt-48">
+<section id="contact" class="relative z-20 -mt-6 overflow-hidden md:-mt-16 lg:-mt-32 xl:-mt-48">
   <div class="relative rounded-top w-curve w-margin h-16 bg-tt-darkblue md:block md:z-20 md:h-24 lg:h-32 xl:h-64"></div>
   <div class="relative bg-tt-darkblue z-10 -mt-10 z-30 lg:-mt-16 xl:-mt-40">
     <div class="absolute w-full h-full z-0" style="background-image: linear-gradient(to bottom, #112530, rgba(17, 37, 48, 0.92)25%), url('{{$options_page->acf_options['background_image']['url']}}'); background-size:repeat;"></div>
@@ -24,8 +24,25 @@
           @endwhile
         </div>
       </div>
-      <div class="google-map lg:order-2 lg:px-8 lg:flex-grow">
-        {!!$google_map!!}
+      <div class="pt-16 lg:w-full lg:order-2 xl:pt-8">
+
+        <div class="gallery-slider relative pb-8">
+          <div class="gallery w-full relative z-0"> 
+            @if($gallery)
+              @foreach($gallery as $image)
+              <div class="">
+                <img class="w-full h-72 object-cover object-center" data-lazy="{{ $image->url }}" />
+              </div>
+              @endforeach
+            @endif
+          </div>
+          <button class="prev arrow"><svg class="h-12 w-12 fill-current hover:text-tt-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76 10l.7-.7z"/></svg></button>
+          <button class="next arrow"><svg class="h-12 w-12 fill-current hover:text-tt-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0 0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24 10l-.7.7z"/></svg></button>
+        </div>
+
+        <div class="google-map">
+          {!!$google_map!!}
+        </div>
       </div>
       <div class="text-tt-darkblue contact-form px-8 lg:order-1 lg:px-0 lg:pl-8 lg:pt-12 lg:w-2/3 xl:pl-24">
         @php
