@@ -50,7 +50,7 @@
       @apply text-tt-darkblue px-6 text-base;
     }
     & li:last-child {
-      @apply border-b-0 -mt-2;
+      @apply border-b-0 -mt-1;
       a {
         @apply text-tt-sand bg-tt-darkblue px-6 py-2 text-xs uppercase font-sans font-normal;
         &:hover {
