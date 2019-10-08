@@ -50,7 +50,6 @@
   @include('partials.get-in-touch')
 
 
-  @debug
     {{-- @debug
   @dump($team->form) --}}
 
