@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class PageSpecialties extends Controller
+class PageServices extends Controller
 {
   protected $acf = true;
 
