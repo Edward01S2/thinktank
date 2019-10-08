@@ -91,7 +91,7 @@
                   <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded shadow-tt shadow-xl shadow-md mb-6 md:py-2 lg:w-full lg:self-start">
                     <div class="accordion-header flex items-center justify-between">
                       <div class="flex items-center">
-                        <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">Specialties</h3>
+                        <h3 class="pl-2 text-tt-gold font-black tracking-wide lg:pl-4 lg:text-base">{{ $options_page->acf_options['individual_staff_title']}}</h3>
                       </div>
                       <button class="accordion-btn outline-none hover:text-tt-gold">
                         <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>

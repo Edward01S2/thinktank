@@ -33,7 +33,7 @@
     <div class="-mt-8 lg:-mt-16 xl:-mt-48">
       <div class="text-center xl:pt-4">
         <div class="px-4 py-8 bg-tt-beige spec-bg md:pt-0 lg:pt-4" style="background-image: linear-gradient(to bottom, #e9ddd2, #e9ddd2 10%, rgba(233, 221, 210, 0.8)), url('{!! $specialties->background->url !!}');"> 
-          <h2 class="uppercase text-2xl pb-8 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">Our Specialties</span></h2>
+          <h2 class="uppercase text-2xl pb-8 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">{!! $specialties->title !!}</span></h2>
           <div class="accordion md:pb-8">
             @foreach($service_loop as $service)
               <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded shadow-xl shadow-md mb-6 md:max-w-md md:mx-auto md:py-2 lg:max-w-xl">
