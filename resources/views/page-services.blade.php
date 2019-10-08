@@ -18,7 +18,7 @@
     <div class="relative -mt-10 z-30 lg:-mt-16 xl:-mt-48">
       <div class="text-center xl:pt-4">
         <div class="px-4 py-8 bg-tt-sand md:pt-0 lg:pt-4"> 
-          <h2 class="uppercase text-2xl pb-10 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">{!! $title !!}</span></h2>
+          <h2 class="uppercase text-2xl pb-10 font-oswald text-tt-darkblue font-semibold tracking-wider md:text-3xl md:pb-12"><span class="title-line">{!! get_the_title() !!}</span></h2>
           <div class="accordion md:pb-8 lg:flex lg:pb-4 xl:max-w-7xl xl:mx-auto">
             @foreach($service_loop as $service)
               <div class="accordion-container flex flex-col py-2 px-4 bg-tt-sand rounded shadow-tt shadow-xl shadow-md mb-6 md:max-w-md md:mx-auto md:py-2 lg:max-w-xl lg:w-1/3 lg:mx-4 lg:self-start xl:mx-6">
