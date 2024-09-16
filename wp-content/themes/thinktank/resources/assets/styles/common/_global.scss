@@ -1,0 +1,69 @@
+html {
+  scroll-behavior: smooth;
+  @apply bg-tt-sand;
+}
+
+body {
+  @apply min-h-screen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-tight text-tt-darkblue;
+}
+
+p {
+  @apply mb-3 leading-normal font-muli;
+}
+
+a {
+  @apply cursor-pointer no-underline border-b border-transparent;
+
+  transition: 0.2s ease;
+}
+li {
+  @apply text-tt-darkblue;
+}
+
+button {
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.rounded-top {
+  border-radius: 50%;
+}
+
+.social-link {
+  @apply fill-current;
+  &:hover {
+    @apply text-tt-gold;
+  }
+}
+
+.social-svg {
+  @apply h-6 w-6 fill-current text-tt-sand;
+  &:hover {
+    @apply text-tt-gold;
+  }
+}
+
+.blur {
+  filter:blur(5px);
+  overflow: hidden;
+  margin: 5px;
+  transform: translate3d(0, 0, 0);
+}
+
+.no-blur {
+  filter:blur(0);
+}
+
+#tinymce {
+  @apply bg-white;
+}

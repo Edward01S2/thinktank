@@ -1,0 +1,52 @@
+{
+  "name": "sage",
+  "version": "9.0.9",
+  "author": "Roots <team@roots.io>",
+  "homepage": "https://roots.io/sage/",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roots/sage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roots/sage/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ],
+  "scripts": {
+    "dev": "npm run development",
+    "development": "npx mix",
+    "watch": "npx mix watch",
+    "watch-poll": "npx mix watch -- --watch-options-poll=1000",
+    "hot": "npx mix watch --hot",
+    "prod": "npm run production",
+    "production": "npx mix --production"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "~10.2.5",
+    "laravel-mix": "^6.0.49",
+    "mix-tailwindcss": "^1.3.0",
+    "postcss": "^8.1.10",
+    "sass": "^1.32.8",
+    "sass-loader": "^16.0.1",
+    "tailwindcss": "^3.4.11"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "responsive-nav": "^1.0.39",
+    "slick-carousel": "^1.8.1"
+  }
+}

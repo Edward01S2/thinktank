@@ -1,0 +1,44 @@
+.posts {
+  p {
+    @apply font-muli;
+  }
+}
+
+.post-content {
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+.more-posts {
+  .blog-list{
+    &:first-of-type {
+      @apply border-t border-tt-brown;
+    }
+    &:last-of-type .bottom-border{
+      @apply border-0;
+    }
+  }
+}
+
+@screen xl {
+  .more-posts{
+    .blog-list{
+      &:first-of-type {
+        @apply border-0;
+      }
+      &:last-of-type .bottom-border{
+        @apply border-t;
+      }
+      &:last-of-type .bb-noimage{
+        @apply border-b;
+      }
+    }
+  }
+
+.post-content {
+  p {
+    @apply leading-loose pb-4;
+  }
+}
+}

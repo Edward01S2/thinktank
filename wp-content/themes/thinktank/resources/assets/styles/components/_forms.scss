@@ -1,0 +1,123 @@
+/* purgecss start ignore */
+.gfield {
+  @apply text-left;
+  textarea {
+    @apply w-full h-32 p-2;
+  }
+  .ginput_container_fileupload {
+    .gfield_description {
+      @apply hidden;
+    }
+    input {
+      @apply bg-transparent px-0 hover:cursor-pointer #{!important};
+    }
+  }
+
+}
+
+.gfield_label {
+  @apply uppercase text-left font-bold;
+}
+
+.gform_validation_container {
+  @apply hidden;
+}
+
+.ginput_container input {
+  @apply pl-2;
+}
+
+body .gform_wrapper .gform_footer input[type=submit] {
+  @apply w-auto bg-tt-darkblue text-tt-sand px-8 py-2 uppercase mb-0 cursor-pointer;
+  &:hover {
+    @apply bg-tt-gold text-tt-darkblue;
+  }
+} 
+
+.gform_footer {
+  @apply text-center pt-4;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield input {
+  @apply bg-tt-sand w-full py-1 md:py-1.5;
+}
+
+.ginput_container{
+  @apply pt-1;
+}
+
+#gform_wrapper_2 {
+  @apply py-8;
+  .gfield_label {
+    @apply text-tt-sand font-acumin tracking-widest text-lg;
+  }
+  .gform_footer input[type=submit] {
+    @apply w-auto bg-tt-sand text-tt-darkblue px-8 py-2 uppercase mb-0 cursor-pointer;
+    &:hover {
+      @apply bg-tt-gold text-tt-darkblue;
+    }
+  } 
+  .gfield textarea {
+    @apply w-full h-24 pl-2 bg-tt-sand text-base border border-tt-darkblue;
+  }
+  .gform_fields {
+    @apply text-tt-darkblue text-base grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:gap-x-8;
+  }
+  .gfield .gfield_select {
+    @apply appearance-none w-full py-1.5 bg-tt-sand pl-2 relative border border-tt-darkblue rounded-none cursor-pointer;
+    .gf_placeholder{
+      @apply text-gray-600;
+    }
+  }
+  .ginput_container_select {
+    @apply relative cursor-pointer;
+    &:before {
+      @apply text-tt-darkblue fill-current;
+      position: absolute;
+      content: url('../images/cheveron-down.svg');
+      height: 24px;
+      width: 24px;
+      top: 10px;
+      right: 5px;
+      z-index:20;
+      pointer-events: none;
+    }
+  }
+  .gform_confirmation_wrapper {
+    @apply text-tt-sand pt-4;
+  }
+}
+
+.contact-form #gform_wrapper_2 {
+
+  .gform_footer input[type=submit] {
+    @apply w-auto bg-tt-sand text-tt-darkblue px-12 py-2 uppercase mb-0;
+    &:hover {
+      @apply bg-tt-gold text-tt-darkblue;
+    }
+  }
+  input, textarea {
+    @apply border-0;
+  }
+  .gfield .gfield_select {
+    @apply border-0;
+  }
+  .gfield_label {
+    @apply text-tt-sand font-acumin tracking-widest text-lg font-bold;
+  }
+  .gform_fields {
+    @apply text-tt-darkblue;
+  }
+  .gform_confirmation_wrapper {
+    @apply text-tt-darkblue;
+  }
+} 
+
+#gform_1 {
+  .gform_fields {
+    @apply grid grid-cols-1 gap-4;
+    textarea {
+      @apply bg-tt-sand;
+    }
+  }
+}

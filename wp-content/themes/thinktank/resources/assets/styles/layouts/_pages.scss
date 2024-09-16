@@ -1,0 +1,180 @@
+/* purgecss start ignore */
+.w-curve {
+  width: 110%;
+}
+
+.w-margin {
+  margin-left: -5%;
+}
+
+.spec-bg {
+  background-position: bottom; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+.title-line {
+  @apply relative;
+  &:after {
+    content: '';
+    height: 3px;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: -0.3rem;
+    background-color: #87AEBF;
+    border-radius: 25px;
+  }
+  &.orange {
+    &:after {
+      @apply bg-tt-gold;
+    }
+  }
+}
+
+.accordion-btn {
+  &.opened {
+    .open {
+      @apply hidden;
+    }
+    .close {
+      @apply block;
+    }
+  }
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.contact-content {
+  p {
+    @apply mb-0 leading-relaxed px-8 text-lg;
+  }
+
+  a {
+    @apply underline;
+    &:hover {
+      color: #274C68;
+    }
+  }
+  table {
+    @apply -ml-2 md:-ml-3;
+    td {
+      @apply px-2 md:px-3;
+    }
+  }
+}
+
+.google-map {
+  @apply w-full overflow-hidden h-0 relative;
+  padding-bottom: 56.25%;
+  iframe {
+    @apply left-0 top-0 w-full h-full absolute;
+  }
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+  @apply gap-2;
+	
+	margin: 0;
+	padding: 1rem 0rem;
+	
+	list-style-type: none;
+
+	
+		button {
+			display: block;
+			width: 10px !important;
+			height: 10px !important;
+			padding: 0 !important;
+			
+      border: 1px solid !important;
+      @apply border-tt-darkblue;
+			border-radius: 100%;
+			// background-color: blue !important;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			@apply bg-tt-darkblue;
+		}
+	
+}
+
+.gallery-slider {
+  .arrow {
+    @apply text-tt-sand fill-current absolute z-20;
+  }
+  .prev {
+    left: 1.5rem;
+    top: calc(50% - 2rem);
+  }
+  .next {
+    right: 1.5rem;
+    top: calc(50% - 2rem);
+  }
+}
+
+.staff-content {
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+.blog-container {
+  article{
+    &:first-of-type {
+      @apply border-t border-tt-brown;
+    }
+  }
+}
+
+.pagination {
+  h2 {
+    @apply hidden;
+  }
+  .nav-links {
+    @apply inline-flex border-2 border-tt-darkblue font-muli font-bold;
+    .page-numbers {
+      @apply border border-tt-darkblue p-1 px-2;
+      &:hover {
+        @apply bg-tt-darkblue text-tt-sand;
+      }
+    }
+    .current {
+      @apply bg-tt-brown;
+      &:hover {
+        @apply bg-tt-brown text-tt-darkblue;
+      }
+    }
+  }
+}
+
+@screen lg {
+  .contact-content {
+    p {
+      @apply px-0;
+    }
+  }
+}
+
+.feat-staff-dots {
+  @apply pb-8 lg:pb-0;
+  li {
+    @apply text-white;
+  }
+  .slick-active button {
+    @apply bg-white #{!important};
+  }
+}
+
+.featured-on {
+  .slick-list {
+    @apply overflow-visible;
+  }
+}
+/* purgecss end ignore */
