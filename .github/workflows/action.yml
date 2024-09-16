@@ -38,7 +38,7 @@ jobs:
     - name: Deploy to WPE
       uses: wpengine/github-action-wpe-site-deploy@v3
       with:
-        SCRIPT: post-deploy.sh
+        #SCRIPT: post-deploy.sh
         WPE_ENV: ${{ env.WPE_INSTALL_NAME }}
 
   # php-build:
