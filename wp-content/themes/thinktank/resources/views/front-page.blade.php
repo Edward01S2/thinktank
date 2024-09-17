@@ -172,7 +172,7 @@
         </div>
     </section>
 
-    <section id="featured">
+    <section id="featured" class="overflow-hidden">
         <div class="container px-4 mx-auto lg:px-8">
             <div class="py-8 text-center md:py-12 lg:py-16 xl:py-24">
                 <h2
