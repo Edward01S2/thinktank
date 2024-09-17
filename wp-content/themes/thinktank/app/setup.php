@@ -15,8 +15,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('acumin', 'https://use.typekit.net/sje2prt.css', false, null);
     wp_enqueue_style('oswald', 'https://fonts.googleapis.com/css?family=Muli:400,600,700,700i,900|Oswald:400,600,700&display=swap', false, null);
 
-    wp_enqueue_style('sage/main.css', asset('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset('scripts/main.js'), ['jquery'], null, true);
+    if(!is_admin()){
+        wp_enqueue_style('sage/main.css', asset('styles/main.css'), false, null);
+        wp_enqueue_script('sage/main.js', asset('scripts/main.js'), ['jquery'], null, true);
+    }
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -72,8 +74,9 @@ add_action('after_setup_theme', function () {
     /**
      * Use main stylesheet for visual editor
      * @see resources/assets/styles/layouts/_tinymce.scss
+     * add_editor_style(asset_path('styles/main.css'));
      */
-    add_editor_style(asset_path('styles/main.css'));
+    
 }, 20);
 
 /**
