@@ -10,7 +10,7 @@
             </div>
         </div>
     </section>
-    @php
+    {{--     @php
         $team = $options_page->acf_options['full_staff'];
     @endphp
     @if ($team)
@@ -40,9 +40,12 @@
             </div>
 
         </section>
-    @endif
+    @endif --}}
 
-    <section id="therapist" class="relative z-20 pt-12 overflow-hidden md:pt-20 lg:pt-48 xl:pt-52">
+    <section id="therapist" class="relative z-20 -mt-6 overflow-hidden md:-mt-16 lg:-mt-32 xl:-mt-48">
+        <div class="relative h-16 rounded-top w-curve w-margin bg-tt-sand md:block md:z-20 md:h-24 lg:h-32 xl:h-64">
+        </div>
+
         <div class="relative z-30 -mt-10 lg:-mt-16 xl:-mt-48">
             <div class="text-center xl:pt-4">
                 <div class="py-8 bg-tt-sand md:pt-0 lg:pt-4">
@@ -69,9 +72,16 @@
                                             @php
                                                 if (!empty($item['tags'])) {
                                                     $output = [];
+                                                    $lpc_tag = null;
                                                     foreach ($item['tags'] as $tag) {
-                                                        $string = (string) $tag->name;
-                                                        array_push($output, "$string");
+                                                        if (stripos($tag->name, 'LPC') !== false) {
+                                                            $lpc_tag = $tag;
+                                                        } else {
+                                                            array_push($output, $tag->name);
+                                                        }
+                                                    }
+                                                    if ($lpc_tag) {
+                                                        array_unshift($output, $lpc_tag->name);
                                                     }
                                                     echo implode(', ', $output);
                                                 }
@@ -126,9 +136,16 @@
                                                 @php
                                                     if (!empty($item['tags'])) {
                                                         $output = [];
+                                                        $lpc_tag = null;
                                                         foreach ($item['tags'] as $tag) {
-                                                            $string = (string) $tag->name;
-                                                            array_push($output, "$string");
+                                                            if (stripos($tag->name, 'LPC') !== false) {
+                                                                $lpc_tag = $tag;
+                                                            } else {
+                                                                array_push($output, $tag->name);
+                                                            }
+                                                        }
+                                                        if ($lpc_tag) {
+                                                            array_unshift($output, $lpc_tag->name);
                                                         }
                                                         echo implode(', ', $output);
                                                     }

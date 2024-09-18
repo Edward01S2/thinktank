@@ -104,7 +104,20 @@ function populate_posts( $form ) {
 
         // you can add additional parameters here to alter the posts that are retrieved
         // more info: http://codex.wordpress.org/Template_Tags/get_posts
-        $posts = get_posts( 'numberposts=-1&post_type=staff&orderby=title&order=ASC' );
+        // $posts = get_posts( 'numberposts=-1&post_type=staff&orderby=title&order=ASC' );
+        $posts = get_posts(array(
+            'post_type' => 'staff',
+            'orderby' => 'title',
+            'order' => 'ASC',
+            'numberposts' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'staff-type',
+                    'field' => 'slug',
+                    'terms' => 'therapist',
+                ),
+            ),
+        ));
 
         $choices = array();
 

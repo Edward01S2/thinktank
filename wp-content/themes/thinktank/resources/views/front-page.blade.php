@@ -3,21 +3,23 @@
 @section('content')
     {{-- @include('partials.page-header') --}}
 
-    <section id="hero" class="pb-24">
-        <div class="container mx-auto">
-            <div class="flex flex-col justify-center">
-                <img class="w-1/2 py-12 mx-auto md:w-2/5 lg:w-1/4 lg:py-16 xl:w-1/5" src="{!! $hero->hero_image->url !!}" />
-                <div class="px-8 pb-8 text-center md:pb-8">
+    <section id="hero" class="relative z-10 pt-24 pb-20 bg-center bg-no-repeat bg-cover md:pb-24 lg:py-28 xl:py-36"
+        style="background-image: url('{!! $hero->bg_image->url !!}');">
+        <div class="absolute inset-0 z-0 bg-black opacity-40"></div>
+        <div class="container relative z-10 mx-auto">
+            <div class="flex flex-col justify-center pb-4 md:pb-0">
+                {{--                 <img class="w-1/2 py-12 mx-auto md:w-2/5 lg:w-1/4 lg:py-16 xl:w-1/5" src="{!! $hero->hero_image->url !!}" /> --}}
+                <div class="flex flex-col gap-24 px-8 text-center md:gap-32 lg:gap-48 xl:gap-64">
                     <h2
-                        class="pb-4 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-darkblue md:text-3xl">
+                        class="pb-4 text-4xl font-semibold tracking-wider uppercase text-tt-sand font-oswald md:text-5xl lg:text-7xl xl:text-8xl">
                         {!! $hero->title !!}</h2>
-                    <p class="text-lg leading-normal font-muli text-tt-darkblue md:px-12 lg:px-32 xl:w-4/5 xl:mx-auto">
+                    <p class="text-2xl font-semibold leading-normal text-tt-sand md:text-3xl lg:text-5xl">
                         {!! $hero->content !!}</p>
                 </div>
             </div>
-            <div class="flex justify-center pb-16 text-center">
+            <div class="flex justify-center pb-8 text-center md:pb-4">
                 <a href="#specialties" class="hover:opacity-50">
-                    <svg class="w-10 h-10" width="1px" height="1px" viewBox="0 0 32 24"
+                    <svg class="w-10 h-10 lg:h-12 lg:w-12" width="1px" height="1px" viewBox="0 0 32 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <g fill="none" fill-rule="evenodd">
                             <g stroke-width="3" stroke="#C3884D" stroke-linecap="round">
@@ -31,16 +33,18 @@
         </div>
     </section>
 
-    <section id="specialties" class="-mt-24 overflow-hidden">
+    <section id="specialties" class="relative z-20 -mt-24 overflow-hidden">
         <div class="h-16 rounded-top w-curve w-margin bg-tt-beige md:h-24 lg:h-32 xl:h-64"></div>
         <div class="-mt-8 lg:-mt-16 xl:-mt-48">
             <div class="text-center xl:pt-4">
                 <div class="px-4 py-8 bg-tt-beige spec-bg md:pt-0 lg:pt-4"
                     style="background-image: linear-gradient(to bottom, #e9ddd2, #e9ddd2 10%, rgba(233, 221, 210, 0.8)), url('{!! $specialties->background->url !!}');">
-                    <h2
+                    {{--                     <h2
                         class="pb-8 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-darkblue md:text-3xl md:pb-12">
                         <span class="title-line">{!! $specialties->title !!}</span>
-                    </h2>
+                    </h2> --}}
+                    <p class="max-w-screen-lg pb-8 mx-auto text-lg !leading-loose text-tt-darkblue md:pb-12 lg:text-2xl">
+                        {!! $specialties->content !!}</p>
                     <div class="accordion md:pb-8">
                         @foreach ($service_loop as $service)
                             <div
@@ -86,6 +90,37 @@
         </div>
     </section>
 
+    <section id="featured" class="overflow-hidden">
+        <div class="container px-4 mx-auto lg:px-8">
+            <div class="py-8 text-center md:py-12 lg:py-16 xl:py-24">
+                <h2
+                    class="pb-8 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-darkblue md:text-3xl md:pb-12">
+                    <span class="title-line">Featured On</span>
+                </h2>
+                <div class="pt-4 pb-6 featured-on md:pb-8 xl:pb-12">
+                    @foreach ($items as $item)
+                        <a href="{!! $item->link->url !!}" class="md:inline-block md:px-8" target="{!! $item->link->target !!}">
+                            <img src="{!! $item->logo->url !!}" alt="{!! $item->logo->alt !!}"
+                                class="object-contain w-auto mx-auto h-14 lg:h-16">
+                        </a>
+                    @endforeach
+                </div>
+                <div class="flex justify-center gap-4 text-tt-darkblue lg:gap-8">
+                    <button class="prev arrow"><svg class="w-8 h-8 fill-current hover:text-tt-gold xl:w-10 xl:h-10"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76 10l.7-.7z" />
+                        </svg></button>
+                    <button class="next arrow"><svg class="w-8 h-8 fill-current hover:text-tt-gold xl:w-10 xl:h-10"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0 0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24 10l-.7.7z" />
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="staff">
         <div class="flex flex-col bg-tt-stone text-tt-sand md:flex-row">
             <div class="relative pt-8 md:w-1/2 xl:flex-row xl:justify-end md:py-8 xl:pt-0 xl:px-0">
@@ -97,7 +132,7 @@
                     class="relative flex flex-col items-center xl:items-start xl:pt-12 xl:pl-4 lg:mx-auto lg:max-w-[calc(512px-2rem)] xl:max-w-[calc(640px-2rem)] xl:mr-0 2xl:max-w-[calc(720px-2rem)]">
                     <h2
                         class="pb-10 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-sand md:text-3xl md:pb-12 xl:pl-[14rem]">
-                        <span class="title-line">Staff Highlights</span>
+                        <span class="title-line">Team Highlights</span>
                     </h2>
                     <div class="container block mx-auto feat-staff">
                         @foreach ($staff_loop as $item)
@@ -116,9 +151,16 @@
                                                 @php
                                                     if (!empty($item['tags'])) {
                                                         $output = [];
+                                                        $lpc_tag = null;
                                                         foreach ($item['tags'] as $tag) {
-                                                            $string = (string) $tag->name;
-                                                            array_push($output, "$string");
+                                                            if (stripos($tag->name, 'LPC') !== false) {
+                                                                $lpc_tag = $tag;
+                                                            } else {
+                                                                array_push($output, $tag->name);
+                                                            }
+                                                        }
+                                                        if ($lpc_tag) {
+                                                            array_unshift($output, $lpc_tag->name);
                                                         }
                                                         echo implode(', ', $output);
                                                     }
@@ -142,7 +184,7 @@
                     <div class="relative block mx-auto append-dots feat-staff-dots xl:ml-0 xl:pl-[14rem]"></div>
                     <div class="w-full text-center bg-tt-sand md:bg-tt-stone xl:static xl:text-left xl:pl-[14rem]">
                         <a class="block py-2 mx-8 my-4 text-lg uppercase bg-tt-darkblue hover:bg-tt-gold hover:text-tt-darkblue lg:inline-block lg:px-12 xl:mx-0 xl:mb-12"
-                            href="/staff">Meet the Full Team</a>
+                            href="/staff">Meet the Team</a>
                     </div>
                 </div>
             </div>
@@ -167,38 +209,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="featured" class="overflow-hidden">
-        <div class="container px-4 mx-auto lg:px-8">
-            <div class="py-8 text-center md:py-12 lg:py-16 xl:py-24">
-                <h2
-                    class="pb-8 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-darkblue md:text-3xl md:pb-12">
-                    <span class="title-line">Featured On</span>
-                </h2>
-                <div class="pt-4 pb-6 featured-on md:pb-8 xl:pb-12">
-                    @foreach ($items as $item)
-                        <a href="{!! $item->link->url !!}" class="md:inline-block md:px-8"
-                            target="{!! $item->link->target !!}">
-                            <img src="{!! $item->logo->url !!}" alt="{!! $item->logo->alt !!}"
-                                class="object-contain w-auto mx-auto h-14 lg:h-16">
-                        </a>
-                    @endforeach
-                </div>
-                <div class="flex justify-center gap-4 text-tt-darkblue lg:gap-8">
-                    <button class="prev arrow"><svg class="w-8 h-8 fill-current hover:text-tt-gold xl:w-10 xl:h-10"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path
-                                d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76 10l.7-.7z" />
-                        </svg></button>
-                    <button class="next arrow"><svg class="w-8 h-8 fill-current hover:text-tt-gold xl:w-10 xl:h-10"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path
-                                d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0 0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24 10l-.7.7z" />
-                        </svg></button>
                 </div>
             </div>
         </div>

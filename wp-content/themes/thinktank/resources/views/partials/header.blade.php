@@ -3,7 +3,7 @@
         <nav class="flex flex-wrap items-center justify-between pt-4 pb-4 lg:flex-no-wrap">
             <div id="nav-brand" class="flex items-center flex-shrink-0">
                 <a class="brand hover:opacity-50" href="{{ home_url('/') }}">
-                    <img class="h-10 md:h-12" src="{{ $options_page->acf_options['logo']['url'] }}" alt="">
+                    <img class="h-10 md:h-12 lg:h-14" src="{{ $options_page->acf_options['logo']['url'] }}" alt="">
                 </a>
             </div>
             <div class="block lg:hidden">

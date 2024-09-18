@@ -29,9 +29,16 @@
                                     @php
                                         if (!empty(get_the_tags())) {
                                             $output = [];
+                                            $lpc_tag = null;
                                             foreach (get_the_tags() as $tag) {
-                                                $string = (string) $tag->name;
-                                                array_push($output, "$string");
+                                                if (stripos($tag->name, 'LPC') !== false) {
+                                                    $lpc_tag = $tag;
+                                                } else {
+                                                    array_push($output, $tag->name);
+                                                }
+                                            }
+                                            if ($lpc_tag) {
+                                                array_unshift($output, $lpc_tag->name);
                                             }
                                             echo implode(', ', $output);
                                         }
@@ -64,9 +71,16 @@
                                                 @php
                                                     if (!empty(get_the_tags())) {
                                                         $output = [];
+                                                        $lpc_tag = null;
                                                         foreach (get_the_tags() as $tag) {
-                                                            $string = (string) $tag->name;
-                                                            array_push($output, "$string");
+                                                            if (stripos($tag->name, 'LPC') !== false) {
+                                                                $lpc_tag = $tag;
+                                                            } else {
+                                                                array_push($output, $tag->name);
+                                                            }
+                                                        }
+                                                        if ($lpc_tag) {
+                                                            array_unshift($output, $lpc_tag->name);
                                                         }
                                                         echo implode(', ', $output);
                                                     }
@@ -87,13 +101,6 @@
                                     <div
                                         class="grid max-w-screen-sm grid-cols-1 gap-6 px-4 md:gap-6 sm:px-0 xl:max-w-screen-md">
 
-                                        @if (!empty($trainings))
-                                            @include('partials.staff-accordion', [
-                                                'title' => 'Trainings',
-                                                'content' => $trainings,
-                                            ])
-                                        @endif
-
                                         @if (!empty($education))
                                             @include('partials.staff-accordion', [
                                                 'title' => 'Education',
@@ -101,24 +108,19 @@
                                             ])
                                         @endif
 
+                                        @if (!empty($trainings))
+                                            @include('partials.staff-accordion', [
+                                                'title' => 'Trainings',
+                                                'content' => $trainings,
+                                            ])
+                                        @endif
+
+
+
                                         @if (!empty($specialties))
                                             @include('partials.staff-accordion', [
                                                 'title' => 'Areas of Experience',
                                                 'content' => $specialties,
-                                            ])
-                                        @endif
-
-                                        @if (!empty($languages))
-                                            @include('partials.staff-accordion', [
-                                                'title' => 'Languages',
-                                                'content' => $languages,
-                                            ])
-                                        @endif
-
-                                        @if (!empty($ages))
-                                            @include('partials.staff-accordion', [
-                                                'title' => 'Ages',
-                                                'content' => $ages,
                                             ])
                                         @endif
 
@@ -129,10 +131,18 @@
                                             ])
                                         @endif
 
-                                        @if (!empty($location))
+
+                                        @if (!empty($ages))
                                             @include('partials.staff-accordion', [
-                                                'title' => 'Location',
-                                                'content' => $location,
+                                                'title' => 'Ages',
+                                                'content' => $ages,
+                                            ])
+                                        @endif
+
+                                        @if (!empty($languages))
+                                            @include('partials.staff-accordion', [
+                                                'title' => 'Languages',
+                                                'content' => $languages,
                                             ])
                                         @endif
 
@@ -142,6 +152,18 @@
                                                 'content' => $note,
                                             ])
                                         @endif
+
+
+
+                                        {{-- 
+                                        @if (!empty($location))
+                                            @include('partials.staff-accordion', [
+                                                'title' => 'Location',
+                                                'content' => $location,
+                                            ])
+                                        @endif --}}
+
+
 
 
                                     </div>

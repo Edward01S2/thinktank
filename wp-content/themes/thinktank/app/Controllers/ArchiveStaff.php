@@ -11,6 +11,7 @@ class ArchiveStaff extends Controller
     $admins = get_posts([
       'post_type' => 'staff',
       'posts_per_page' => '-1',
+      'orderby' => 'menu_order',
       'order' => 'ASC',
       'tax_query' => array(
         array(
@@ -37,6 +38,7 @@ class ArchiveStaff extends Controller
     $thera = get_posts([
       'post_type' => 'staff',
       'posts_per_page' => '-1',
+      'orderby' => 'menu_order',
       'order' => 'ASC',
       'tax_query' => array(
         array(
