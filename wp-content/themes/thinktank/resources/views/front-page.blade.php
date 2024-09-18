@@ -3,36 +3,37 @@
 @section('content')
     {{-- @include('partials.page-header') --}}
 
-    <section id="hero" class="relative z-10 pt-12 pb-20 bg-center bg-no-repeat bg-cover md:pb-24 xl:pt-24"
+    <section id="hero"
+        class="relative z-10 py-40 bg-bottom bg-no-repeat bg-cover sm:py-60 lg:py-80 xl:py-[25rem] xl:bg-center"
         style="background-image: url('{!! $hero->bg_image->url !!}');">
         <div class="container relative z-10 mx-auto">
             <div class="flex flex-col justify-center pb-4 md:pb-0">
                 {{--                 <img class="w-1/2 py-12 mx-auto md:w-2/5 lg:w-1/4 lg:py-16 xl:w-1/5" src="{!! $hero->hero_image->url !!}" /> --}}
                 <div class="flex flex-col px-8 text-center gap-28 md:gap-36 lg:gap-56 xl:gap-[24rem]">
-                    <h2 class="pb-4 text-4xl font-semibold tracking-wider uppercase text-tt-gold font-oswald xl:text-5xl">
-                        {!! $hero->title !!}</h2>
-                    <div class="flex justify-center md:pb-4">
+                    {{--                     <h2 class="pb-4 text-4xl font-semibold tracking-wider uppercase text-tt-gold font-oswald xl:text-5xl">
+                        {!! $hero->title !!}</h2> --}}
+                    {{--                     <div class="flex justify-center md:pb-4">
                         <div class="px-4 py-2 rounded bg-opacity-70 bg-tt-sand">
                             <p class="mb-0 text-lg font-semibold leading-normal text-tt-darkblue xl:text-xl">
                                 {!! $hero->content !!}</p>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
-            <div class="flex justify-center pb-8 text-center md:pb-4">
-                <a href="#specialties" class="hover:opacity-50">
-                    <svg class="w-8 h-8 lg:h-10 lg:w-10" width="1px" height="1px" viewBox="0 0 32 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g fill="none" fill-rule="evenodd">
-                            <g stroke-width="3" stroke="#C3884D" stroke-linecap="round">
-                                <path d="M30 11L16 22 2 11" />
-                                <path d="M30 2L16 13 2 2" />
-                            </g>
+        </div>
+        <div class="absolute inset-x-0 z-20 flex justify-center text-center bottom-28">
+            <a href="#specialties" class="hover:opacity-50">
+                <svg class="w-8 h-8 lg:h-10 lg:w-10" width="1px" height="1px" viewBox="0 0 32 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <g stroke-width="3" stroke="#C3884D" stroke-linecap="round">
+                            <path d="M30 11L16 22 2 11" />
+                            <path d="M30 2L16 13 2 2" />
                         </g>
-                    </svg>
-                </a>
-            </div>
+                    </g>
+                </svg>
+            </a>
         </div>
     </section>
 
@@ -40,12 +41,16 @@
         <div class="h-16 rounded-top w-curve w-margin bg-tt-beige md:h-24 lg:h-32 xl:h-64"></div>
         <div class="-mt-8 lg:-mt-16 xl:-mt-48">
             <div class="text-center xl:pt-4">
-                <div class="px-4 py-8 bg-tt-beige spec-bg md:pt-0 lg:pt-4"
+                <div class="px-4 pt-4 pb-8 bg-tt-beige spec-bg md:pt-0 lg:pt-4"
                     style="background-image: linear-gradient(to bottom, #e9ddd2, #e9ddd2 10%, rgba(233, 221, 210, 0.8)), url('{!! $specialties->background->url !!}');">
                     {{--                     <h2
                         class="pb-8 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-darkblue md:text-3xl md:pb-12">
                         <span class="title-line">{!! $specialties->title !!}</span>
                     </h2> --}}
+                    <h2
+                        class="pb-8 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-darkblue md:text-3xl md:pb-12">
+                        <span class="title-line">{!! $hero->content !!}</span>
+                    </h2>
                     <p class="max-w-screen-lg pb-8 mx-auto text-lg !leading-loose text-tt-darkblue md:pb-12 lg:text-2xl">
                         {!! $specialties->content !!}</p>
                     <div class="accordion md:pb-8">
