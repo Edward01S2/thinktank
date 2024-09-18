@@ -4,9 +4,9 @@
     @apply py-4 mx-16 border-b
   }
   & li:last-child {
-    @apply border-b-0 text-tt-darkblue mt-8;
+    @apply border-b-0 text-tt-darkblue mt-8 flex justify-center;
     a {
-      @apply text-tt-darkblue bg-tt-sand px-8 py-2 uppercase font-sans font-semibold;
+      @apply text-tt-darkblue bg-tt-sand px-8 py-2 uppercase font-sans font-semibold text-sm w-full;
     }
   }
   a {

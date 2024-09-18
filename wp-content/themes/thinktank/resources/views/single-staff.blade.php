@@ -148,7 +148,7 @@
 
                                         @if (!empty($note))
                                             @include('partials.staff-accordion', [
-                                                'title' => 'Notes',
+                                                'title' => 'Note',
                                                 'content' => $note,
                                             ])
                                         @endif

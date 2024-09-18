@@ -28,12 +28,8 @@ class FrontPage extends Controller
     $services = get_posts([
         'post_type' => 'staff',
         'posts_per_page'=>'-1',
-        'meta_query' => array(
-          array(
-            'key' => 'featured',
-            'value' => '1',
-          )
-        )
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
     ]);
 
     return array_map(function ($post) {

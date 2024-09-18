@@ -3,23 +3,26 @@
 @section('content')
     {{-- @include('partials.page-header') --}}
 
-    <section id="hero" class="relative z-10 pt-24 pb-20 bg-center bg-no-repeat bg-cover md:pb-24 lg:py-28 xl:py-36"
+    <section id="hero" class="relative z-10 pt-12 pb-20 bg-center bg-no-repeat bg-cover md:pb-24 xl:pt-24"
         style="background-image: url('{!! $hero->bg_image->url !!}');">
-        <div class="absolute inset-0 z-0 bg-black opacity-40"></div>
         <div class="container relative z-10 mx-auto">
             <div class="flex flex-col justify-center pb-4 md:pb-0">
                 {{--                 <img class="w-1/2 py-12 mx-auto md:w-2/5 lg:w-1/4 lg:py-16 xl:w-1/5" src="{!! $hero->hero_image->url !!}" /> --}}
-                <div class="flex flex-col gap-24 px-8 text-center md:gap-32 lg:gap-48 xl:gap-64">
-                    <h2
-                        class="pb-4 text-4xl font-semibold tracking-wider uppercase text-tt-sand font-oswald md:text-5xl lg:text-7xl xl:text-8xl">
+                <div class="flex flex-col px-8 text-center gap-28 md:gap-36 lg:gap-56 xl:gap-[24rem]">
+                    <h2 class="pb-4 text-4xl font-semibold tracking-wider uppercase text-tt-gold font-oswald xl:text-5xl">
                         {!! $hero->title !!}</h2>
-                    <p class="text-2xl font-semibold leading-normal text-tt-sand md:text-3xl lg:text-5xl">
-                        {!! $hero->content !!}</p>
+                    <div class="flex justify-center md:pb-4">
+                        <div class="px-4 py-2 rounded bg-opacity-70 bg-tt-sand">
+                            <p class="mb-0 text-lg font-semibold leading-normal text-tt-darkblue xl:text-xl">
+                                {!! $hero->content !!}</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="flex justify-center pb-8 text-center md:pb-4">
                 <a href="#specialties" class="hover:opacity-50">
-                    <svg class="w-10 h-10 lg:h-12 lg:w-12" width="1px" height="1px" viewBox="0 0 32 24"
+                    <svg class="w-8 h-8 lg:h-10 lg:w-10" width="1px" height="1px" viewBox="0 0 32 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <g fill="none" fill-rule="evenodd">
                             <g stroke-width="3" stroke="#C3884D" stroke-linecap="round">
