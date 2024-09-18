@@ -37,3 +37,6 @@ wp-config-sample.php
 wp-activate.php
 readme.html
 /wp-content/.sandbox2
+apple-touch-icon.png
+apple-touch-icon-precomposed.png
+favicon.ico
