@@ -4,7 +4,7 @@
     </div>
     <div class="relative z-10 flex flex-col px-8 py-8 text-center text-tt-sand md:py-16 lg:max-w-3xl lg:mx-auto">
         <h2 class="pb-4 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-sand md:text-3xl md:pb-12">
-            <span class="title-line">Voicemails & Emails</span>
+            <span class="title-line">Get in Touch</span>
         </h2>
         <p class="md:px-8 md:pb-4">There is a solution for your mental health needs, and we are here to help you find it.
             If this is an emergency, please call 911.</p>
