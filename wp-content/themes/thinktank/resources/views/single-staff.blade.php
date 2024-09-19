@@ -146,25 +146,19 @@
                                             ])
                                         @endif
 
+                                        @if (!empty($location))
+                                            @include('partials.staff-accordion', [
+                                                'title' => 'Location',
+                                                'content' => $location,
+                                            ])
+                                        @endif
+
                                         @if (!empty($note))
                                             @include('partials.staff-accordion', [
                                                 'title' => 'Note',
                                                 'content' => $note,
                                             ])
                                         @endif
-
-
-
-                                        {{-- 
-                                        @if (!empty($location))
-                                            @include('partials.staff-accordion', [
-                                                'title' => 'Location',
-                                                'content' => $location,
-                                            ])
-                                        @endif --}}
-
-
-
 
                                     </div>
                                 </div>
