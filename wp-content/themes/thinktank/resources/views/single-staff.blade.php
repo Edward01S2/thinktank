@@ -26,23 +26,7 @@
                                 class="pb-2 text-2xl font-semibold tracking-wider uppercase font-oswald text-tt-sand md:text-3xl md:pb-12">
                                 {!! get_the_title() !!}
                                 <span class="text-base font-semibold">
-                                    @php
-                                        if (!empty(get_the_tags())) {
-                                            $output = [];
-                                            $lpc_tag = null;
-                                            foreach (get_the_tags() as $tag) {
-                                                if (stripos($tag->name, 'LPC') !== false) {
-                                                    $lpc_tag = $tag;
-                                                } else {
-                                                    array_push($output, $tag->name);
-                                                }
-                                            }
-                                            if ($lpc_tag) {
-                                                array_unshift($output, $lpc_tag->name);
-                                            }
-                                            echo implode(', ', $output);
-                                        }
-                                    @endphp
+                                    @include('partials.staff-tag', ['tags' => get_the_tags()])
                                 </span>
                             </h2>
                             <div class="hidden">
@@ -68,23 +52,7 @@
                                                 }
                                             @endphp
                                             <span class="text-base font-semibold">
-                                                @php
-                                                    if (!empty(get_the_tags())) {
-                                                        $output = [];
-                                                        $lpc_tag = null;
-                                                        foreach (get_the_tags() as $tag) {
-                                                            if (stripos($tag->name, 'LPC') !== false) {
-                                                                $lpc_tag = $tag;
-                                                            } else {
-                                                                array_push($output, $tag->name);
-                                                            }
-                                                        }
-                                                        if ($lpc_tag) {
-                                                            array_unshift($output, $lpc_tag->name);
-                                                        }
-                                                        echo implode(', ', $output);
-                                                    }
-                                                @endphp
+                                                @include('partials.staff-tag', ['tags' => get_the_tags()])
                                             </span>
                                         </h2>
                                         <div class="hidden">

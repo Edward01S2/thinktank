@@ -156,23 +156,7 @@
                                                 }
                                             @endphp
                                             <span class="text-xs font-semibold">
-                                                @php
-                                                    if (!empty($item['tags'])) {
-                                                        $output = [];
-                                                        $lpc_tag = null;
-                                                        foreach ($item['tags'] as $tag) {
-                                                            if (stripos($tag->name, 'LPC') !== false) {
-                                                                $lpc_tag = $tag;
-                                                            } else {
-                                                                array_push($output, $tag->name);
-                                                            }
-                                                        }
-                                                        if ($lpc_tag) {
-                                                            array_unshift($output, $lpc_tag->name);
-                                                        }
-                                                        echo implode(', ', $output);
-                                                    }
-                                                @endphp
+                                                @include('partials.staff-tag', ['tags' => $item['tags']])
                                             </span>
                                         </h3>
                                         <div class="pb-4 xl:pr-16">
