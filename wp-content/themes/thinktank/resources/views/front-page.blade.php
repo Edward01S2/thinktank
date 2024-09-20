@@ -4,7 +4,7 @@
     {{-- @include('partials.page-header') --}}
 
     <section id="hero"
-        class="relative z-10 py-40 bg-bottom bg-no-repeat bg-cover sm:py-60 lg:py-80 xl:py-[25rem] xl:bg-center"
+        class="relative z-10 pt-0 pb-96 bg-top bg-no-repeat bg-cover sm:py-60 lg:py-80 xl:py-[25rem] xl:bg-center"
         style="background-image: url('{!! $hero->bg_image->url !!}');">
         <div class="container relative z-10 mx-auto">
             <div class="flex flex-col justify-center pb-4 md:pb-0">

@@ -92,6 +92,13 @@
                                             ])
                                         @endif
 
+                                        @if (!empty($services))
+                                            @include('partials.staff-accordion', [
+                                                'title' => 'Services',
+                                                'content' => $services,
+                                            ])
+                                        @endif
+
                                         @if (!empty($insurances))
                                             @include('partials.staff-accordion', [
                                                 'title' => 'Insurances',
