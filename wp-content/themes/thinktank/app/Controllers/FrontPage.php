@@ -30,6 +30,12 @@ class FrontPage extends Controller
         'posts_per_page'=>'-1',
         'orderby' => 'menu_order',
         'order' => 'ASC',
+        'meta_query' => [
+          [
+            'key' => 'featured',
+            'value' => '1'
+          ]
+        ]
     ]);
 
     return array_map(function ($post) {
